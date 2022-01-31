@@ -1,0 +1,20 @@
+<div id="buscar" class="searchs">
+  <div class="form-group" >
+    <input type="text" class="form-control" name="filterPost" placeholder="Search..." [(ngModel)]="filterPost">
+    <div><a href="#" class="closeS cursor"><span onclick="closeSearch()">&times;</span></a></div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div *ngFor="let movie of grillas | filter:filterPost">
+    <a style="text-decoration: none; color: white;" href="#"  onclick="btn(1)">
+      <mat-card style="background-color: transparent!important;" class="imagenes">
+          <img mat-card-image src={{movie.image}}>
+      </mat-card>
+      <mat-card-content class="title">
+        <p>{{movie.title}}</p>
+        <p style="color: #57606a;">{{movie.year}}</p>
+      </mat-card-content></a>
+  </div>
+</div>

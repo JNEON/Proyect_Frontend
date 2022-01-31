@@ -1,6 +1,9 @@
 <!-- Toolbar -->
 <div class="grid">
     <div class="item">
+            <button class="menu">
+              <span class="material-icons">view_headline</span>
+            </button>
         <div class="menus">
           <div id="navegador">
             <ul>
@@ -35,72 +38,38 @@
                 </div>
               </li>
             </ul>
-              <div class="borrar"></div>
           </div>
         </div>
     </div>
-    <div class="grid-axis">
-        <!--<mat-icon style="color: brown;">lock_open</mat-icon>
-        <mat-icon>search</mat-icon>
-        <mat-icon>favorite</mat-icon>
-        <mat-icon>inbox</mat-icon>
-        <mat-icon>info</mat-icon>
-        <mat-icon>archive</mat-icon>
-        <mat-icon>settings</mat-icon>-->
-        <span class="material-icons" style="color:brown;">lock_open</span>
-        <span class="material-icons">search</span>
-        <span class="material-icons">favorite</span>
-        <span class="material-icons">inbox</span>
-        <span class="material-icons">info</span>
-        <span class="material-icons">archive</span>
-        <span class="material-icons">settings</span>
+    <div class="axis">
+      <div class="grid-axis">
+          <span class="material-icons" style="color:brown;">lock_open</span>
+          <a href="#descript1" style="color:white;" onclick="searchs()"><span class="material-icons">search</span></a>
+          <span class="material-icons">favorite</span>
+          <span class="material-icons">inbox</span>
+          <span class="material-icons">info</span>
+          <span class="material-icons">archive</span>
+          <span class="material-icons">settings</span>
+      </div>
     </div>
   </div>
-<!-- Body -->
+  <div id="campos"></div>
+  
+ <!--Body -->
+    <div *ngFor="let info of grillas">
+      <div id="descript1" *ngIf="info.id == 1"class="modal">
+          <div class="modal-content" >
+          <div><img src={{info.image}}></div>
+          <div><div class="info" ><h2>{{info.title}}</h2><h6>{{info.year}} &nbsp; &#13; &nbsp; 1:48 &nbsp; &#183; &nbsp; {{info.gender}} &nbsp; &#183; &nbsp; <img src="../assets/Img/imdb.gif" style="width: 3%;"> &nbsp; &#183; &nbsp; 1/24 </h6><p>{{info.sinopsys}}</p></div>
+          <div class="grid">
+            <div class="item"><div id="navegador"><div style="width: 28px;"><span class="material-icons">favorite</span></div><div style="width: 160px;"><h5>Añadir favoritos</h5></div><div style="width: 28px;"><span class="material-icons">visibility_off</span></div><h5>No Visto</h5></div>
+              <div id="navegador"><div><button class="botonesi" ><div style="margin-right: 20px;"><h5>Ver ahora</h5></div>&#9474;<div><img src="../assets/Img/playview.gif" class="imgi"></div><div> &#9650;</div></button></div><button class="botonesi"><h5>Ver trailer</h5></button><button class="botonesi"><h5>Descargar</h5></button><button class="botonesi2" style="background-color: #0969da;"><h5>720p</h5></button><button class="botonesi2"><h5>1080p</h5></button><button class="botonesi2"><h5>2160p</h5></button>  </div></div>
+            <div class="item"><div id="navegador" style="width: 160px"><ul><div style="width: 100px;"><h5>Subtitle</h5></div></ul><ul><div><img src="../assets/Img/X.GIF" class="imgi"></div><div> &#9650;</div></ul></div>
+              <div id="navegador" style="width: 160px"><ul><div style="width: 100px;"><h5>Audio language</h5></div></ul><ul><div><img src="../assets/Img/Bandera.gif" class="imgi"></div><div> &#9650;</div></ul></div></div></div></div>
+          <div><a href="#"><span class="close cursor" onclick="closeModal(1)">&times;</span></a></div></div>
+      </div>
+    </div>
 
-<div id="descript" class="modal">
-    <div class="modal-content" >
-    <div><img src="../assets/Img/deadpool.jpg"></div><div><div class="info" ><h2>Mi prime Modal</h2><h6>2016 &nbsp; &#13; &nbsp; 1:48 &nbsp; &#183; &nbsp; action/adventure/comedy &nbsp; &#183; &nbsp; <img src="../assets/Img/imdb.gif" style="width: 3%;"> &nbsp; &#183; &nbsp; 1/24 </h6><p>Basado en el anti-héroe menos convencional de la Marvel, Deadpool narra el origen de un ex-operativo de la fuerzas especiales llamado Wade Wilson, reconvertido a mercenario, y que tras ser sometido a un cruel experimento adquiere poderes de curación rápida, adoptando Wade entonces el alter ego de Deadpool. Armado con sus nuevas habilidades y un oscuro y retorcido sentido del humor, Deadpool intentará dar caza al hombre que casi destruye su vida.</p></div>
-    <div class="grid">
-      <div class="item"><div id="navegador"><ul><span class="material-icons">favorite</span></ul> <ul> <h5>Añadir favoritos</h5></ul><ul><span class="material-icons">visibility_off</span></ul><ul><h5>No Visto</h5></ul></div>
-      <div id="navegador"><div><button class="botonesi" ><div style="margin-right: 20px;"><h5>Ver ahora</h5></div>&#9474;<div><img src="../assets/Img/playview.gif" class="imgi"></div><div> &#9650;</div></button></div><button class="botonesi"><h5>Ver trailer</h5></button><button class="botonesi"><h5>Descargar</h5></button><button class="botonesi2" style="background-color: #0969da;"><h5>720p</h5></button><button class="botonesi2"><h5>1080p</h5></button><button class="botonesi2"><h5>2160p</h5></button>  </div></div>
-      <div class="item"><div id="navegador"><ul><h5>subtitle</h5></ul><ul><div><img src="../assets/Img/X.GIF" class="imgi"></div></ul><div> &#9650;</div> <div id="navigator"><ul><h5>Audio language</h5></ul><ul><div><img src="../assets/Img/Bandera.gif" class="imgi"></div><div> &#9650;</div></ul></div></div></div></div></div>
-    <div><a href="#"><span class="close cursor" onclick="closeModal()">&times;</span></a></div></div>
-</div>
-<div id="descript2" class="modal">
-  <div class="modal-content" >
-    <a href="#"><span class="close cursor" onclick="closeModal()">&times;</span></a>
-    <div><img src="../assets/Img/guardianes1.jpg"></div><div><h2>Mi primer Modal</h2><p>Este es mi primera ventana modal sin utilizar JavaScript.</p><span><input type="button" value="info"/></span></div>  </div>  
-</div>
-<div class="board">
-  <div class="grid-row">
-    <div class="grid-container"><a href="#descript" onclick="openModal()"><img src="../assets/Img/deadpool.jpg" class="shadow"><div><h4>Deadpool</h4><h5>2016</h5></div></a></div>
-    <div class="grid-container"><a href="#descript" onclick="openModal(2)"></a><img src="../assets/Img/guardianes1.jpg" class="shadow"><div><h4>Guardianes de la galaxia</h4><h5>2014</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/batman 2.webp" class="shadow"><div><h4>The dark knight</h4><h5>2008</h5></div></div>  
-    <div class="grid-container"><img src="../assets/Img/inception.jpg" class="shadow"><div><h4>Inception</h4><h5>2010</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/dr strange.webp" class="shadow"><div><h4>Doctor Strage</h4><h5>2016</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/Logan.jpg" class="shadow"><div><h4>Logan</h4><h5>2017</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/ss.jpg" class="shadow"><div><h4>Suicide Squad</h4><h5>2016</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/Avengers.jpg" class="shadow"><div><h4>The Avengers</h4><h5>2012</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/ww.jpg" class="shadow"><div><h4>Wonder Woman</h4><h5>2017</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/Interestelar.jpg" class="shadow"><div><h4>Interestelar</h4><h5>2014</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/arrival.jpg" class="shadow"><div><h4>Arrival</h4><h5>2016</h5></div></div>  
-    <div class="grid-container"><img src="../assets/Img/Avengers civil war.jpg" class="shadow"><div><h4>Capitan America: Civil War</h4><h5>2016</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/avatar.webp" class="shadow"><div><h4>Avatar</h4><h5>2009</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/Matrix.jpg" class="shadow"><div><h4>The Matrix</h4><h5>1999</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/guardianes 2.jpg" class="shadow"><div><h4>Guardianes de la galaxia Vol II</h4><h5>2017</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/starwars.jpg" class="shadow"><div><h4>Star Wars: The Force Awaken</h4><h5>2015</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/moana.jpg" class="shadow"><div><h4>Moana</h4><h5>2016</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/frozen.jpg" class="shadow"><div><h4>Frozen</h4><h5>2013</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/ironman.jpg" class="shadow"><div><h4>Iron Man</h4><h5>2008</h5></div></div>  
-    <div class="grid-container"><img src="../assets/Img/the martian.webp" class="shadow"><div><h4>The Martian</h4><h5>2015</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/spiderman.jpg" class="shadow"><div><h4>Spider-Man: Homecoming</h4><h5>2017</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/fantastic beasts.jpg" class="shadow"><div><h4>Fantastic Beasts an where Find Then</h4><h5>2016</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/passagers.jpg" class="shadow"><div><h4>Passagers</h4><h5>2016</h5></div></div>
-    <div class="grid-container"><img src="../assets/Img/SW Rogue.jpg" class="shadow"><div><h4>Rogue One: Star Wars</h4><h5>2016</h5></div></div>
-  </div>
-</div>
-
-
+     <app-posts></app-posts>
 
 <!-- Footer -->
