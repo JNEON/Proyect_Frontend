@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ProyectFrontend</title>
+  <title>Galeria de Peliculas</title>
   <base href="/">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,18 +11,144 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <script type="text/javascript">
+    const c = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    op = 0;
+    
     function ver(n) {
-      document.getElementById("subseccion"+n).style.display="block"
+      document.getElementById("subseccion"+n).style.display="block";
     }
     function ocultar(n) {
-      document.getElementById("subseccion"+n).style.display="none"
+      document.getElementById("subseccion"+n).style.display="none";
     }
-    function openModal() {
-      document.getElementById("descript").style.display = "block";
+    function searchs(){
+      console.log("abrir");
+      document.getElementById("buscar").style.display = "block";
     }
-    function closeModal() {
-      document.getElementById("descript").style.display = "none";
-    } 
+    function closeSearch() {
+      console.log("cerrar");
+      document.getElementById("buscar").style.display = "none";
+    }
+    function btn(a) {
+      switch (a) {
+        case 0:
+          console.log("No existe una peli asi!");
+        break;
+        case 1:
+        console.log("a ="+a);
+          document.getElementById("descript"+a).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+        case 2:
+        console.log("a ="+a);
+          document.getElementById("descript"+a).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+        case 3:
+        console.log("a ="+a);
+          document.getElementById("descript"+(a-1)).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+        case 4:
+        console.log("a ="+a);
+          document.getElementById("descript"+(a-1)).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+        case 5:
+        console.log("a ="+a);
+          document.getElementById("descript"+(a-1)).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+        case 6:
+        console.log("a ="+a);
+          document.getElementById("descript"+(a-1)).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+          case 7:
+        console.log("a ="+a);
+          document.getElementById("descript"+(a-1)).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+          case 8:
+        console.log("a ="+a);
+          document.getElementById("descript"+(a-1)).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+          case 9:
+        console.log("a ="+a);
+          document.getElementById("descript"+(a-1)).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+          case 10:
+          console.log("a ="+a);
+          document.getElementById("descript"+(a-1)).style.display = "none";
+          document.getElementById("descript"+a).style.display = "block";
+            for(let op = 0; op < c.length; op++){
+            op = op + 1;
+            if(op!==a){
+              closeModal(op);
+            }
+          } 
+          break;
+        default:
+      }
+    }
+    function closeModal(b) {
+      return document.getElementById("descript"+b).style.display = "none";
+    }
     </script>
 
 </head>
@@ -30,3 +156,5 @@
   <app-root></app-root>
   </body>
 </html>
+
+
