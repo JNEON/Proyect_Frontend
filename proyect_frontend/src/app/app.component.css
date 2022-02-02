@@ -6,25 +6,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
-  }
-
-  p {
-    margin: 0;
-  }
-
   /* menu toolbar*/
   .menu {
     display:none;
   }
-
   .grid {
     display: grid;
     grid-gap: 10px;
@@ -32,12 +17,9 @@
     position: relative;
     z-index: 1;
   }
-  
-  
   .menus * {
     padding: 20px 10px 0 10px;
   }
-
   /* desplegable*/
   #navegador { 
     display: flex;
@@ -45,7 +27,6 @@
     align-content: flex-start;
     transform: translate(0%,-1%);
     } 
-
   #navegador ul {
     text-align: left;
     display: grid;
@@ -54,7 +35,6 @@
     font-size: 13px;
     width: 80%;
     }
-
   #navegador li { 
     margin: 0px 0px 5px 0px; 
     padding: 0em 1% 0 10%; 
@@ -80,15 +60,11 @@
     padding: 0 0 15px 0;
     display: none;
     }
-
 #navegador li a:link, #navegador li a:visited { 
            color: #feffe4; text-decoration: none; }
 #navegador li a:hover, #navegador li a:active { 
            color:#ffd7a9 ; text-decoration: none; }
 .borrar { clear: both; }
-
-
-
 
   /* grid icons*/
 
@@ -97,11 +73,10 @@
     grid-template-columns: auto auto auto auto auto auto auto auto;
     grid-gap: 2px;
     align-content: flex-end;
+    margin: 15px 0 auto;
     transform: translate(-20%,-20%);
   }
-
    /* Modal*/
-
   .modal {
     background-color: rgba(23, 21, 39, 0.514);
     position: relative;
@@ -119,8 +94,7 @@
     height: 100%;
     overflow: auto;
   }
-  
-  /* Modal Content */
+    /* Modal Content */
   .modal-content {
     background-color:rgba(7, 4, 29, 0.267);
     padding: 1%;
@@ -136,26 +110,22 @@
     max-width: 1300px;
     max-height: 900px;
   }
-
   #descript1{
     opacity:1;
     pointer-events:auto;
   }
-  
   .modal-content > div > img {
     position: block;
     margin: 1% 1% auto;
     padding: 0;
     width: 75%;
   }
-
   .info {
     position: grid; 
     text-align:left; 
     margin: 2% 2% auto; 
     height: 70%;
   }
-
   .botonesi {
     width: 145px; 
     height: 35px;
@@ -168,7 +138,6 @@
     border-radius: 3px;
     color:#fff;
   }
-
   .botonesi2 {
     height: 25px;
     border-radius: 40px;
@@ -177,14 +146,12 @@
     background-color:#096bda00;
     color:#fff;
   }
-
   .imgi {
     width: 20px;
     text-align: left; 
     align-content: flex-start;
   }
-  
-  /* boton cerrar*/
+   /* boton cerrar*/
   .close {
     color: #fff;
     position: absolute;
@@ -193,15 +160,13 @@
     font-size: 35px;
     font-weight: bold;
   }
-  
-  .close:hover,
+   .close:hover,
   .close:focus {
     color: #999;
     text-decoration: none;
     cursor: pointer;
   }
-  
-  .container {
+   .container {
     margin-right: auto !important;;
     margin-left: auto !important;;
     max-width: 98% !important;;
@@ -213,11 +178,9 @@
       display:block;
       margin: 0;
     }
-
     .menus {
       display: flex;
     }
-
     .grid {
       display: flex;
       position: absolute;
@@ -227,7 +190,6 @@
       max-width: 1000px;
       width:18%;
     }
-
     #navegador { 
       display: flex;
       position: relative;
@@ -235,15 +197,11 @@
       align-content: flex-start;
       transform: translate(0%,-1%);
       } 
-
     #navegador ul {
       text-align: left;
       display: block;
-      padding: 0px 1px;
-      font-size: 13px;
       width: 20%;
       }
-
     .axis {     
         position: block;
         width: 100%;
@@ -253,12 +211,7 @@
     .grid-axis {     
       position: absolute ;
       display: flex;
-      grid-template-columns: auto auto auto auto auto auto auto auto;
-      grid-gap: 2px;
-      height: 30px;
       margin: 15px 20px 60px 450px;
-      align-content: flex-end;
-      transform: translate(-80%,-20%);
     }
 
     .container {
@@ -267,21 +220,18 @@
       max-width: 90% !important;;
     }
   }
-
   @media screen and (max-width: 575px) {
     .menu {
       display:none;
       position: none !important;
       margin: 0;
     }
-
     .menus {
       display:block;
       position: absolute;
       height: 200px;
       width: 100%;
     }
-
     .grid {
       display: block;
       position: fixed;
@@ -292,7 +242,6 @@
       max-width: 100%;
       width:100%;
     }
-
     #navegador { 
       display: flex;
       position: relative;
@@ -300,7 +249,6 @@
       background-color: transparent;
       width: auto !important;
       } 
-
     #navegador ul {
       text-align: center !important;
       display: block;
@@ -317,24 +265,20 @@
       align-content: center !important;
       list-style-type:none;
       }
-      
-    #navegador li a { 
+      #navegador li a { 
       margin: 0px 1px 0px 1px;;
       }
-
-    #subseccion1, #subseccion2 { 
+      #subseccion1, #subseccion2 { 
       position: absolute;
       left: 25%;
       z-index: 2;
       }
-
-    .axis {     
+      .axis {     
         position: block;
         width: 100%;
         height: 30px;
       }
-
-    .grid-axis {     
+      .grid-axis {     
       position: absolute ;
       display: flex;
       grid-template-columns: auto auto auto auto auto auto auto auto;
@@ -371,17 +315,14 @@
     .botonesi {
       width: auto; 
     }
-  
-    .botonesi2 {
+      .botonesi2 {
       height: autox;
     }
-  
-    .imgi {
+      .imgi {
       width: 20px;
       text-align: center; 
     }
-    
-    .container{
+        .container{
       max-width: 100% !important;;
     }
   }
